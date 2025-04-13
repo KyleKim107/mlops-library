@@ -1,0 +1,21 @@
+venv/
+
+app/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# app/model/
+
+/model/*
+
+
+*.bin
+*.model
+
+*.egg-info/
+pip-wheel-metadata/
+tokenizers_install_log.txt
+
+# GCP account key
+MLOps Service Account.json

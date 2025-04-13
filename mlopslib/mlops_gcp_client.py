@@ -20,5 +20,16 @@ class MLOpsGCSClient(object):
         except Exception as e:
             print(f"Failed to upload: {e}")
 
-    def download_model():
-        return True
+    def download_model(self, bucket_name, blob_name, dest_file_path):
+        try:
+            
+            bucket = self.client.bucket(bucket_name) # Get the bucket object
+            # print(f"Access to bucket . {bucket_name}")
+            blob = bucket.blob(blob_name) # Get the blob object (corrected from 'blick.blob')
+            # print(f"Get blick blob . {blob_name}")
+            blob.download_to_filename(dest_file_path) # Download the blob to local file
+
+            print(f"model is downloaded. {dest_file_path}")
+        except Exception as e:
+            print(f"Failed to download")
+        
