@@ -1,6 +1,6 @@
 venv/
 
-app/__pycache__/
+mlopslibs/__pycache__/
 *.pyc
 *.pyo
 *.pyd
